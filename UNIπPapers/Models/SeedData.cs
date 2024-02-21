@@ -43,33 +43,33 @@ public static class SeedData
                 },
                  new Paper
                  {
-                     PaperType = "Bond Paper",
-                     Color = "Blue",
-                     Size = "A3",
-                     Thickness = 20,
-                     Qty = 2,
-                     Price = 12M,
-                     Reviews = "Good"
+                     PaperType = "Inkjet Paper",
+                     Color = "Bright White",
+                     Size = "A4",
+                     Thickness = 32,
+                     Qty = 100,
+                     Price = 25M,
+                     Reviews = "Excellent"
                  },
                 new Paper
                 {
                     PaperType = "Cardstock",
                     Color = "Purple",
                     Size = "A4",
-                    Thickness = 20,
-                    Qty = 2,
-                    Price = 12M,
+                    Thickness = 110,
+                    Qty = 50,
+                    Price = 20M,
                     Reviews = "Good"
                 },
                  new Paper
                  {
-                     PaperType = "Bond Paper",
-                     Color = "Blue",
+                     PaperType = "Tissue Paper",
+                     Color = "White",
                      Size = "A3",
-                     Thickness = 20,
-                     Qty = 2,
-                     Price = 12M,
-                     Reviews = "Good"
+                     Thickness = 17,
+                     Qty = 100,
+                     Price = 10M,
+                     Reviews = "Versatile"
                  }
             );
             context.SaveChanges();

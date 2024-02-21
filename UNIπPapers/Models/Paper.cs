@@ -20,8 +20,7 @@ public class Paper
     [Column(TypeName = "decimal(18, 2)")]
     public decimal Thickness { get; set; }
 
-    [Range(1, 100)]
-    [DataType(DataType.Currency)]
+    
     [Column(TypeName = "decimal(18, 2)")]
     public decimal Qty { get; set; }
 
@@ -31,7 +30,7 @@ public class Paper
     public decimal Price { get; set; }
 
     [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$")]
-    [StringLength(5)]
+    [StringLength(20)]
     [Required]
     public string? Reviews { get; set; }
 }

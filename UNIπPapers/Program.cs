@@ -1,8 +1,12 @@
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using UNIπPapers.Data;
+using Microsoft.Extensions.DependencyInjection;
+using UNIπPapers.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<UNIπPapersContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("UNIπPapersContext") ?? throw new InvalidOperationException("Connection string 'UNIπPapersContext' not found.")));
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
@@ -15,7 +19,12 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
 
+    SeedData.Initialize(services);
+}
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

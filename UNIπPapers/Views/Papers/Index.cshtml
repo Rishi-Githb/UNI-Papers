@@ -1,0 +1,83 @@
+﻿@model UNIπPapers.Models.PaperColorViewModel
+
+@{
+    ViewData["PaperType"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form asp-controller="Papers" asp-action="Index" method="get">
+    <p>
+
+        <select asp-for="PaperColor" asp-items="Model.Colors">
+            <option value="">All</option>
+        </select>
+
+        PaperType: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Papers![0].PaperType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Papers![0].Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Papers![0].Size)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Papers![0].Thickness)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Papers![0].Qty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Papers![0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Papers![0].Reviews)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Papers!) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaperType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Thickness)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reviews)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

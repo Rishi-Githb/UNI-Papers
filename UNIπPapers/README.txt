@@ -109,6 +109,10 @@ I added search capability to the Index action method that searched paper by type
 After that, Updated the Index method found inside Controllers/UniPipapers.cs with the following code. 
 I updated Readme file as well.
 
+2024-02-20
+1800
+We have done migration which is 20240220204012_InitialCreate.cs
+
 Comment
 
 We also checked our project individul laptops in our team. After resolving errors the code is running sucessfully.

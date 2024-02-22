@@ -5,6 +5,7 @@ using UNIπPapers.Data;
 using System;
 using System.Linq;
 using UNIπPapers.Data;
+using System.Drawing;
 
 namespace UNIπPapers.Models;
 public static class SeedData
@@ -71,7 +72,59 @@ public static class SeedData
                      Qty = 100,
                      Price = 10M,
                      Reviews = "Versatile"
-                 }
+                 },
+                 new Paper
+                 {
+                PaperType = "Fish Paper",
+                     Color = "White",
+                     Size = "A4",
+                     Thickness = 22,
+                     Qty = 5,
+                     Price = 8M,
+                     Reviews = "Good"
+                 },
+                  new Paper
+                  {
+                      PaperType = "Blotting Paper",
+                      Color = "White",
+                      Size = "A3",
+                      Thickness = 30,
+                      Qty = 100,
+                      Price = 55M,
+                      Reviews = "Excellent"
+                  },
+                   new Paper
+                   {
+                       PaperType = "Art Paper",
+                       Color = "Pink",
+                       Size = "A3",
+                       Thickness = 26,
+                       Qty = 50,
+                       Price = 25M,
+                       Reviews = "Nice"
+                   },
+                    new Paper
+                    {
+                        PaperType = "Chart",
+                        Color = "Yellow",
+                        Size = "A1",
+                        Thickness = 20,
+                        Qty = 50,
+                        Price = 30M,
+                        Reviews = "Awosome"
+                    },
+                     new Paper
+                     {
+                         PaperType = "Leather Paper",
+                         Color = "Any",
+                         Size = "A2",
+                         Thickness = 25,
+                         Qty = 150,
+                         Price = 70M,
+                         Reviews = "Good"
+                     }
+
+
             );
             context.SaveChanges();
         }

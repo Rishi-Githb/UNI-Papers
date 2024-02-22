@@ -10,14 +10,15 @@ Professor gave us a topic of product (paper)  and we did research on it.
 4.Different MM avaliable in papers.
 and more
 
-We also decided the company name 
-after research we gathered our findings and created a long list with their properties.
+We also decided the company name as UNIPiPapers.
+after research we gathered our findings and created a long list with their properties such as different
+entities.
 
 Oberservation
 By doing research our team got to know varieties of paper and sizes and many more.
 
 Task2 
-We divided the task to each member that what part will be done by whome.
+We divided the task to each member that what part will be done by whom.
 
 Task3
 Date    :    2024-02-18
@@ -83,4 +84,36 @@ We faced couple of errors while performing the tasks and we fixed the errors. We
 
 As we initially faced with some issues so we gathered at a place and did the job in one Laptop, but later on we have solved and did some work again
 in different laptops.
+
+
+We use Rishi's Laptop and divide tasks.
+
+Rishi 
+
+Created the web application and tested the apllication that its working or not? It was running successfully.
+Moreover, added the controller in the "HelloWorldController.cs". After that, written the necessary code. 
+
+
+Harsh
+
+I modified the HelloWorldController class to use Razor view files. 
+This cleanly encapsulates the process of generating HTML responses to a client.
+Also, Update the Models/Papers.cs file with the following code. The MvcMovieContext object handles the task of connecting 
+to the database and mapping UniPi papers objects to database records. 
+The database context is registered with the Dependency Injection container in the Program.cs file.
+
+
+Sarbjeet
+
+I added search capability to the Index action method that searched paper by types or color etc. 
+After that, Updated the Index method found inside Controllers/UniPipapers.cs with the following code. 
+I updated Readme file as well.
+
+Comment
+
+We also checked our project individul laptops in our team. After resolving errors the code is running sucessfully.
+
+
+
+
 

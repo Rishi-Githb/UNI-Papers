@@ -17,6 +17,7 @@ public static class SeedData
         {
             // Look for any movies.
             if (context.Paper.Any())
+
             {
                 return;   // DB has been seeded
             }

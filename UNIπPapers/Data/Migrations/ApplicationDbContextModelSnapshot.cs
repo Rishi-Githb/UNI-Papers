@@ -8,7 +8,7 @@ using UNIπPapers.Data;
 
 namespace UNIπPapers.Data.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(UNIπPapersContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -9,7 +9,7 @@ using UNIπPapers.Data;
 
 namespace UNIπPapers.Data.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(UNIπPapersContext))]
     [Migration("00000000000000_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {

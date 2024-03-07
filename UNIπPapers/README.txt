@@ -115,7 +115,7 @@ We have done migration which is 20240220204012_InitialCreate.cs
 
 Comment
 
-We also checked our project individul laptops in our team. After resolving errors the code is running sucessfully.
+We also checked our project individul laptops in our team. After resolving errors the code is running sucessfully..
 
 
 

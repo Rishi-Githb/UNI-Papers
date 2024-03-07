@@ -115,7 +115,29 @@ We have done migration which is 20240220204012_InitialCreate.cs
 
 Comment
 
-We also checked our project individul laptops in our team. After resolving errors the code is running sucessfully.
+We also checked our project individul laptops in our team. After resolving errors the code is running sucessfully..
+
+
+Total Time = 140 minutes
+
+
+2024-02-29
+0100
+
+Sarbjeet:
+
+I clone the repository and run successfully and edit the Readme file.
+
+
+Harsh:
+
+I created Azure account, and get $135 credit. Also, I taught my team members.
+
+
+Rishi:
+
+I successfully complete Aunthecation followed by steps.
+
 
 
 

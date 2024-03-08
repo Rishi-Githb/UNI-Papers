@@ -4,9 +4,11 @@ using UNIπPapers.Data;
 using Microsoft.Extensions.DependencyInjection;
 using UNIπPapers.Models;
 
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<UNIπPapersContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("UNIπPapersContext") ?? throw new InvalidOperationException("Connection string 'UNIπPapersContext' not found.")));
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+options.Configuration = builder.Configuration["AZURE_REDIS_CONNECTIONSTRING"];
+options.InstanceName = "SampleInstance";
+});
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
